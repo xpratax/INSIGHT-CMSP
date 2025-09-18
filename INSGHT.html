@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSIGHT</title>
+  <link rel="stylesheet" href="styles.css?v=83">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png">
+  <script src="https://js.sentry-cdn.com/8d38ce047555b74bc9ae8c98ff73bb3c.min.js" crossorigin="anonymous"></script>
+  <script async defer src="https://cdn.jsdelivr.net/gh/altcha-org/altcha/dist_i18n/pt-br.min.js" type="module"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/altcha@latest/dist/altcha.min.js" type="module"></script>
+  <meta name="description" content="Os melhores scripts e bots para Sala do Futuro e CMSP. Automatizar tarefas, grátis e rápido!">
+
+  <style>
+    /* Tema neon vermelho */
+    body {
+      background-color: #0d0d0d;
+      color: #ff1e1e;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 15px #ff1e1e, 0 0 30px #ff0000;
+      color: #ff1e1e;
+    }
+
+    .subtitle {
+      color: #ff5555;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    .container, .section, .modal-content {
+      background-color: #1a1a1a;
+      border: 1px solid #ff1e1e;
+      box-shadow: 0 0 15px #ff0000;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    input, select {
+      background: #0d0d0d;
+      color: #ff1e1e;
+      border: 1px solid #ff1e1e;
+      padding: 8px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input:focus {
+      box-shadow: 0 0 10px #ff0000;
+    }
+
+    .btn {
+      background-color: #0d0d0d;
+      color: #ff1e1e;
+      border: 1px solid #ff1e1e;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-shadow: 0 0 8px #ff0000;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff1e1e;
+      color: #0d0d0d;
+      box-shadow: 0 0 15px #ff0000;
+    }
+
+    /* Espaço ASCII neon central */
+    .ascii-space {
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px dashed #ff1e1e;
+      color: #ff1e1e;
+      font-family: monospace;
+      white-space: pre;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #ff5555;
+      text-shadow: 0 0 8px #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <h1 data-text="INSIGHT">INSIGHT</h1>
+        <p class="subtitle">para sala do futuro e cmsp!</p>
+      </div>
+    </header>
+
+    <!-- Espaço reservado para ASCII Neon -->
+    <div class="ascii-space">
+      <!-- Adicione aqui sua arte ASCII futuramente -->
+      <span>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⡋⠁⠀⠀⠀⠀⢀⣀⣀⡀
+⠀⠀⠀⠀⠀⠀⠠⠒⣶⣶⣿⣿⣷⣾⣿⣿⣿⣿⣛⣋⣉⠀⠀
+⠀⠀⠀⠀⢀⣤⣞⣫⣿⣿⣿⡻⢿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀
+⠀⠀⣶⣾⡿⠿⠿⠿⠿⠋⠈⠀⣸⣿⣿⣿⣿⣷⡈⠙⢆⠀
+⠀⠀⠉⠁⠀⠤⣤⣤⣤⣤⣶⣾⣿⣿⣿⣿⠿⣿⣷⠀⠀⠀
+⠀⠀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⢹⣿⠀⠀⠀
+⢠⣾⣿⣿⣿⣿⠟⠋⠉⠛⠋⠉⠁⣀⠀⠀⠀⠸⠃⠀⠀⠀
+⣿⣿⣿⣿⠹⣇⠀⠀⠀⠀⢀⡀⠀⢀⡙⢷⣦⣄⡀⠀⠀⠀
+⣿⢿⣿⣿⣷⣦⠤⠤⠀⠀⣠⣿⣶⣶⣿⣿⣿⣿⣿⣷⣄⠀
+⠈⠈⣿⡿⢿⣿⣿⣷⣿⣿⡿⢿⣿⣿⣁⡀⠀⠀⠉⢻⣿⣧
+⠀⢀⡟⠀⠀⠉⠛⠙⠻⢿⣦⡀⠙⠛⠯⠤⠄⠀⠀⠈⠈⣿
+⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⡆⠀⠀⠀⠀⠀⠀⠀⠀⢀⠟
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠂⠂⠒⠀⠒⠐⠂⠂⠀⠀⠀⠀⠀⠀⠀⠀</span>
+    </div>
+
+    <section id="loginSection" class="section">
+      <div class="login-container">
+        <button type="button" id="quickLoginBtn" class="quick-login-btn" style="display: none;">
+          <span>Contas Salvas</span>
+          <span class="badge" id="accountCount">0</span>
+        </button>
+        <h2>Login</h2>
+        <form id="loginForm" class="login-form">
+          <div class="input-group">
+            <label for="studentId">RA</label>
+            <div class="input-wrapper">
+              <input type="text" id="studentId" placeholder="RA + dígito + sp | ex: 123456790sp" required>
+              <button type="button" id="clearStudentId" class="clear-btn hidden">×</button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Senha</label>
+            <div class="input-wrapper">
+              <input type="password" id="password" placeholder="Senha" required>
+              <button type="button" id="togglePassword" class="toggle-btn">👁</button>
+              <button type="button" id="clearPassword" class="clear-btn hidden">×</button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <altcha-widget 
+              challengeurl="/api/altcha/challenge"
+              auto="onfocus"
+              hidefooter="true"
+              hidelogo="true"
+              language="pt-BR"
+              expire="120000">
+            </altcha-widget>
+          </div>
+
+          <div class="button-group">
+            <button type="button" id="loginNormal" class="btn">Atividades Pendentes</button>
+            <button type="button" id="loginOverdue" class="btn">Atividades Expiradas</button>
+            <button type="button" id="loginTests" class="btn">Provas Pendentes</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <div id="activityModal" class="modal hidden">
+    <div class="modal-content large">
+      <div class="modal-header">
+        <h2>Selecionar Atividades</h2>
+        <button class="close-btn" id="closeActivityModal">×</button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="activity-list">
+          <div class="select-all">
+            <label>
+              <input type="checkbox" id="selectAll"> Selecionar Todas as Atividades
+            </label>
+          </div>
+          <div id="activityItems" class="activity-items"></div>
+        </div>
+
+        <div class="score-explanation" id="scoreExplanation">
+          <p>Seleção de pontuação: escolha a pontuação para cada atividade.</p>
+        </div>
+
+        <div class="time-settings">
+          <h3 id="mainSettingsHeader">Configurações de Tempo de Estudo</h3>
+          <div id="regularTimeSettings" class="time-inputs">
+            <div class="input-group">
+              <label for="minTime">Tempo Mínimo (segundos)</label>
+              <!-- Valor mínimo alterado para 0 -->
+              <input type="number" id="minTime" value="0" min="0" max="60">
+            </div>
+            <div class="input-group">
+              <label for="maxTime">Tempo Máximo (segundos)</label>
+              <input type="number" id="maxTime" value="3" min="1" max="60">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button id="startSelected" class="btn">Fazer Lições Selecionadas</button>
+          <button id="saveDraft" class="btn">Fazer como Rascunho</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    Entre no nosso servidor do Discord
+    <br>
+    <a href="---SEM URL---">Platform Destroyer - Discord</a>
+    <br>
+    feito por cupiditys | Baseado em Doritus
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+  <script>
+    // Força min/max nos campos numéricos
+    function enforceMinMax(input) {
+      const min = parseInt(input.getAttribute('min'));
+      const max = parseInt(input.getAttribute('max'));
+      let value = parseInt(input.value);
+
+      if (isNaN(value)) {
+        input.value = min;
+        return;
+      }
+
+      if (value < min) {
+        input.value = min;
+      } else if (value > max) {
+        input.value = max;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const numberInputs = document.querySelectorAll('input[type="number"]');
+
+      numberInputs.forEach(input => {
+        input.addEventListener('input', function() {
+          enforceMinMax(this);
+        });
+        input.addEventListener('blur', function() {
+          enforceMinMax(this);
+        });
+      });
+    });
+  </script>
+  <script src="shared-auth.js?v=87"></script>
+  <script src="index.js?v=128"></script>
+</body>
+</html>
